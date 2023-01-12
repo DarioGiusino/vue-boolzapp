@@ -2,7 +2,8 @@
     --bcc-up: #009688;
     --bcc-down: #d5dbd8;
     --bcc-grey: #eaeaea;
-    --notification: #8edafc;
+    --bcc-notification: #8edafc;
+    --bcc-contacts: #fff;
     --user-msg: #d5f9ba;
     --icon-light-grey: #b1b1b1;
     --icon-dark-grey: #6b7376;
@@ -24,27 +25,39 @@ body {
     width: 70vw;
     height: 90vh;
     display: flex;
+    box-shadow: 5px 5px 10px;
+}
+
+#user-side{
+    border-right: 0.5px solid var(--icon-light-grey);
 }
 
 header {
     height: 80px;
+    background-color: var(--bcc-grey);
 }
 
 #notification {
     height: 100px;
+    background-color: var(--bcc-notification);
+
 }
 
 #contacts{
     height: calc(100% - 180px);
+    background-color: var(--bcc-contacts);
 }
 
 #conversation{
     height: calc(100% - 160px);
     overflow-y: auto;
+    background-image: url("../img/mine.jpg");
 }
 
 #message-input{
     height: 80px;
+    background-color: var(--bcc-grey);
+    box-shadow: 0px -5px 5px -7px;
 }
 
 /* # UTILITIES */
@@ -62,34 +75,10 @@ header {
 /* *Search */
 .contact-search{
     height: 50px;
+    background-color: var(--bcc-grey);
 }
 
 .contact-list{
     height: calc(100% - 50px);
     overflow-y: auto;
-}
-
-
-
-
-
-/* ! utilities for developing pourpose (to remove) */
-[class^=fb]{
-    border: 1px solid purple;
-}
-
-#app{
-    border: 1px dotted red;
-}
-
-header, #conversation, #message-input {
-    border: 1px dotted blue;
-}
-
-#notification {
-    border: 1px dotted yellow;
-}
-
-.contact-search, .contact-list{
-    border: 1px dotted green;
 }
