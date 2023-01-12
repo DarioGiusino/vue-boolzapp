@@ -37,6 +37,10 @@ button.btn:hover{
     border-color: var(--icon-light-grey);
 }
 
+figcaption{
+    overflow: hidden;
+}
+
 i{
     color: var(--icon-light-grey);
 }
@@ -51,7 +55,7 @@ i{
     flex-basis: calc(100% / 3 * 2);
 }
 
-.profile-pic{
+.round-pic{
     height: 50px;
     width: 50px;
 }
@@ -65,6 +69,18 @@ i{
 #notification{
     height: 100px;
     background-color: var(--bcc-notification);
+}
+
+#notification figcaption{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+#notification .bi-bell-slash-fill{
+    color: var(--bcc-notification);
+    transform: scale(1.7);
 }
 
 /* ? Contacts */
