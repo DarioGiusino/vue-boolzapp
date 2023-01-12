@@ -33,11 +33,6 @@ header{
     background-color: var(--bcc-grey);
 }
 
-img{
-    height: 50px;
-    width: 50px;
-}
-
 button.btn:hover{
     border-color: var(--icon-light-grey);
 }
@@ -54,6 +49,11 @@ i{
 
 .fb-66{
     flex-basis: calc(100% / 3 * 2);
+}
+
+.profile-pic{
+    height: 50px;
+    width: 50px;
 }
 
 /* # User/Contacts side */
@@ -73,12 +73,13 @@ i{
     background-color: var(--bcc-contacts);
 }
 
-/* *Search */
+/* * Search */
 .contact-search{
     height: 50px;
     background-color: var(--bcc-grey);
 }
 
+/* * Contacts List */
 .contact-list{
     height: calc(100% - 50px);
     overflow-y: auto;
