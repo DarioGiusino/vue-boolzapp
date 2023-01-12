@@ -173,21 +173,37 @@
             </header>
 
             <!-- ? Conversation -->
-            <main id="conversation"></main>
+            <main id="conversation" class="p-5 d-flex flex-column">
+                <div class="user message align-self-end">
+                    <p class="m-0">lorem ipsumlorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur dicta, unde, ipsam corrupti dolore qui quos voluptas nam hic atque, animi ab velit neque iusto commodi amet incidunt. Omnis!</p>
+                    <sub class="date-message">10/01/2020 15:50</sub>
+                </div>
+                <div class="contact message align-self-start">
+                    <p class="m-0">lorem ipsumlorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur dicta, unde, ipsam corrupti dolore qui quos voluptas nam hic atque, animi ab velit neque iusto commodi amet incidunt. Omnis!</p>
+                    <sub class="date-message">10/01/2020 15:50</sub>
+                </div>
+            </main>
 
             <!-- ? Message input -->
             <footer id="message-input" class="px-3 d-flex align-items-center">
+                <!-- * Emoji button -->
                 <div class="btn-group">
                     <button class="btn fs-4">
                         <i class="bi bi-emoji-smile fs-3"></i>
                     </button>
                 </div>
+
+                <!-- * Input text -->
                 <input type="text" class="form-control mx-3 p-3" placeholder="Username">
+
+                <!-- * Send button -->
                 <div class="btn-group">
                     <button class="btn fs-4">
                         <i class="bi bi-send-fill fs-3"></i>
                     </button>
                 </div>
+
+                <!-- * Microphone button -->
                 <div class="btn-group">
                     <button class="btn fs-4">
                         <i class="bi bi-mic-fill fs-3"></i>

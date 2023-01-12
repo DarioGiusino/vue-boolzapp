@@ -122,6 +122,29 @@ i{
     background-image: url("../img/mine.jpg");
 }
 
+#conversation .message{
+    background-color: var(--user-msg);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 250px;
+    position: relative;
+}
+
+#conversation .message.user{
+    background-color: var(--user-msg);
+}
+
+#conversation .message.contact{
+    background-color: #fff;
+}
+
+#conversation .date-message{
+    color: var(--text-grey);
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
 /* ? Message input */
 #message-input{
     height: 80px;
