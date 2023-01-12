@@ -106,6 +106,14 @@ i{
     overflow-y: auto;
 }
 
+.contact-list li{
+    cursor: pointer;
+}
+
+.contact-list li:hover{
+    background-color: var(--bcc-grey);
+}
+
 /* # Chat side */
 /* ? Conversation */
 #conversation{
