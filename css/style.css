@@ -1,18 +1,50 @@
+:root {
+    --bcc-up: #009688;
+    --bcc-down: #d5dbd8;
+    --bcc-grey: #eaeaea;
+    --notification: #8edafc;
+    --user-msg: #d5f9ba;
+    --icon-light-grey: #b1b1b1;
+    --icon-dark-grey: #6b7376;
+    --text-grey: #707d84;
+    --contact-grey: #e9ebeb;
+}
+
 /* # GENERICS */
 body {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(#009688 150px, #d5dbd8 150px);
+    background-image: linear-gradient(var(--bcc-up) 150px, var(--bcc-down) 150px);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #app{
-    border: 1px dotted red;
     width: 70vw;
     height: 90vh;
     display: flex;
+}
+
+header {
+    height: 80px;
+}
+
+#notification {
+    height: 100px;
+}
+
+#contacts{
+    height: calc(100% - 180px);
+}
+
+#conversation{
+    height: calc(100% - 160px);
+    overflow-y: auto;
+}
+
+#message-input{
+    height: 80px;
 }
 
 /* # UTILITIES */
@@ -25,6 +57,18 @@ body {
     flex-basis: calc(100% / 3 * 2);
 }
 
+/* # User/Contacts side */
+/* ? Contacts */
+/* *Search */
+.contact-search{
+    height: 50px;
+}
+
+.contact-list{
+    height: calc(100% - 50px);
+    overflow-y: auto;
+}
+
 
 
 
@@ -32,4 +76,20 @@ body {
 /* ! utilities for developing pourpose (to remove) */
 [class^=fb]{
     border: 1px solid purple;
+}
+
+#app{
+    border: 1px dotted red;
+}
+
+header, #conversation, #message-input {
+    border: 1px dotted blue;
+}
+
+#notification {
+    border: 1px dotted yellow;
+}
+
+.contact-search, .contact-list{
+    border: 1px dotted green;
 }
