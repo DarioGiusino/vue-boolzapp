@@ -12,7 +12,7 @@
 }
 
 /* # GENERICS */
-body {
+body{
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(var(--bcc-up) 150px, var(--bcc-down) 150px);
@@ -32,12 +32,12 @@ body {
     border-right: 0.5px solid var(--icon-light-grey);
 }
 
-header {
+header{
     height: 80px;
     background-color: var(--bcc-grey);
 }
 
-#notification {
+#notification{
     height: 100px;
     background-color: var(--bcc-notification);
 
@@ -60,13 +60,26 @@ header {
     box-shadow: 0px -5px 5px -7px;
 }
 
+img{
+    height: 50px;
+    width: 50px;
+}
+
+button.btn:hover{
+    border-color: var(--icon-light-grey);
+}
+
+i{
+    color: var(--icon-light-grey);
+}
+
 /* # UTILITIES */
 /* * flex utils */
-.fb-33 {
+.fb-33{
     flex-basis: calc(100% / 3);
 }
 
-.fb-66 {
+.fb-66{
     flex-basis: calc(100% / 3 * 2);
 }
 
