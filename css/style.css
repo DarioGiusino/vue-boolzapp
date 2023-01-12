@@ -120,14 +120,16 @@ i{
     height: calc(100% - 160px);
     overflow-y: auto;
     background-image: url("../img/mine.jpg");
+    padding: 50px;
 }
 
 #conversation .message{
     background-color: var(--user-msg);
     padding: 1rem;
     border-radius: 10px;
-    width: 250px;
+    width: 600px;
     position: relative;
+    margin-bottom: 30px;
 }
 
 #conversation .message.user{
