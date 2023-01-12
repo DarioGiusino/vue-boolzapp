@@ -60,6 +60,11 @@ i{
     width: 50px;
 }
 
+.form-control:focus{
+    border-color: var(--bcc-grey);
+    box-shadow: none;
+}
+
 /* # User/Contacts side */
 #user-side{
     border-right: 0.5px solid var(--icon-light-grey);
