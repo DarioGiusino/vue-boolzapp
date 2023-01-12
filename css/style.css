@@ -28,36 +28,9 @@ body{
     box-shadow: 5px 5px 10px;
 }
 
-#user-side{
-    border-right: 0.5px solid var(--icon-light-grey);
-}
-
 header{
     height: 80px;
     background-color: var(--bcc-grey);
-}
-
-#notification{
-    height: 100px;
-    background-color: var(--bcc-notification);
-
-}
-
-#contacts{
-    height: calc(100% - 180px);
-    background-color: var(--bcc-contacts);
-}
-
-#conversation{
-    height: calc(100% - 160px);
-    overflow-y: auto;
-    background-image: url("../img/mine.jpg");
-}
-
-#message-input{
-    height: 80px;
-    background-color: var(--bcc-grey);
-    box-shadow: 0px -5px 5px -7px;
 }
 
 img{
@@ -84,7 +57,22 @@ i{
 }
 
 /* # User/Contacts side */
+#user-side{
+    border-right: 0.5px solid var(--icon-light-grey);
+}
+
+/* ? Notification */
+#notification{
+    height: 100px;
+    background-color: var(--bcc-notification);
+}
+
 /* ? Contacts */
+#contacts{
+    height: calc(100% - 180px);
+    background-color: var(--bcc-contacts);
+}
+
 /* *Search */
 .contact-search{
     height: 50px;
@@ -94,4 +82,19 @@ i{
 .contact-list{
     height: calc(100% - 50px);
     overflow-y: auto;
+}
+
+/* # Chat side */
+/* ? Conversation */
+#conversation{
+    height: calc(100% - 160px);
+    overflow-y: auto;
+    background-image: url("../img/mine.jpg");
+}
+
+/* ? Message input */
+#message-input{
+    height: 80px;
+    background-color: var(--bcc-grey);
+    box-shadow: 0px -5px 5px -7px;
 }
