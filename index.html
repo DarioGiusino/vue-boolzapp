@@ -21,6 +21,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <!-- Internal script(s) -->
+    <script src="js/data_milestone1.js"></script>
     <script src="js/data_milestone2.js"></script>
     <script defer src="js/script.js"></script>
 </head>
@@ -34,9 +35,9 @@
                 <!-- * User image & name -->
                 <div class="d-flex align-items-center h-100">
                     <figcaption class="round-pic rounded-pill me-2">
-                        <img class="img-fluid" src="img/avatar_1.jpg" alt="">
+                        <img class="img-fluid" :src="`img/avatar${data.user.avatar}.jpg`" :alt="data.user.name">
                     </figcaption>
-                    <span>Nome Utente</span>
+                    <span v-text="data.user.name"></span>
                 </div>
 
                 <!-- * Buttons nav -->
@@ -87,44 +88,14 @@
                 <!-- * Contacts list -->
                 <div class="contact-list">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <li v-for="user in data.contacts" class="list-group-item d-flex justify-content-between align-items-center">
                             <!-- * User image & name -->
                             <div class="d-flex align-items-center h-100">
                                 <figcaption class="round-pic rounded-pill me-2">
-                                    <img class="img-fluid" src="img/avatar_1.jpg" alt="">
+                                    <img class="img-fluid" :src="`img/avatar${user.avatar}.jpg`" :alt="user.name">
                                 </figcaption>
                                 <div>
-                                    <span>Nome Utente</span>
-                                    <p class="m-0 text-secondary">Ultimo messaggio...</p>
-                                </div>
-                            </div>
-
-                            <!-- * Unread counts -->
-                            <span class="badge bg-primary rounded-pill">14</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <!-- * User image & name -->
-                            <div class="d-flex align-items-center h-100">
-                                <figcaption class="round-pic rounded-pill me-2">
-                                    <img class="img-fluid" src="img/avatar_1.jpg" alt="">
-                                </figcaption>
-                                <div>
-                                    <span>Nome Utente</span>
-                                    <p class="m-0 text-secondary">Ultimo messaggio...</p>
-                                </div>
-                            </div>
-
-                            <!-- * Unread counts -->
-                            <span class="badge bg-primary rounded-pill">14</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <!-- * User image & name -->
-                            <div class="d-flex align-items-center h-100">
-                                <figcaption class="round-pic rounded-pill me-2">
-                                    <img class="img-fluid" src="img/avatar_1.jpg" alt="">
-                                </figcaption>
-                                <div>
-                                    <span>Nome Utente</span>
+                                    <span>{{ user.name }}</span>
                                     <p class="m-0 text-secondary">Ultimo messaggio...</p>
                                 </div>
                             </div>
