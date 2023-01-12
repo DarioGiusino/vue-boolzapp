@@ -10,5 +10,26 @@ body {
 
 #app{
     border: 1px dotted red;
+    width: 70vw;
     height: 90vh;
+    display: flex;
+}
+
+/* # UTILITIES */
+/* * flex utils */
+.fb-33 {
+    flex-basis: calc(100% / 3);
+}
+
+.fb-66 {
+    flex-basis: calc(100% / 3 * 2);
+}
+
+
+
+
+
+/* ! utilities for developing pourpose (to remove) */
+[class^=fb]{
+    border: 1px solid purple;
 }
