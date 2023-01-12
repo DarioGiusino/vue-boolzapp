@@ -128,3 +128,7 @@ i{
     background-color: var(--bcc-grey);
     box-shadow: 0px -5px 5px -7px;
 }
+
+#message-input i{
+    color: var(--icon-dark-grey);
+}
