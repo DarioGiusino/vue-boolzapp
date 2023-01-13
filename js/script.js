@@ -2,10 +2,13 @@ const app = Vue.createApp({
     name: 'Boolzapp',
     data(){
         return{
+            currentIndex: 0,
+
             user: {
                 name: 'Dario',
                 avatar: '_io'
               },
+
             contacts: [
                 {
                   name: 'Michele',
@@ -87,6 +90,16 @@ const app = Vue.createApp({
                   ],
                 },
             ]
+        }
+    },
+    computed: {
+        currentContact() {
+            return this.contacts[this.currentIndex];
+        }
+    },
+    methods: {
+        showCurrentChat(index) {
+            return this.currentIndex = index;
         }
     }
 })
