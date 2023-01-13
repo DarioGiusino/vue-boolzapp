@@ -35,9 +35,9 @@
                 <!-- * User image & name -->
                 <div class="d-flex align-items-center h-100">
                     <figcaption class="round-pic rounded-pill me-2">
-                        <img class="img-fluid" :src="`img/avatar${data.user.avatar}.jpg`" :alt="data.user.name">
+                        <img class="img-fluid" :src="`img/avatar${user.avatar}.jpg`" :alt="user.name">
                     </figcaption>
-                    <span v-text="data.user.name"></span>
+                    <span v-text="user.name"></span>
                 </div>
 
                 <!-- * Buttons nav -->
@@ -88,14 +88,14 @@
                 <!-- * Contacts list -->
                 <div class="contact-list">
                     <ul class="list-group list-group-flush">
-                        <li v-for="user in data.contacts" class="list-group-item d-flex justify-content-between align-items-center">
-                            <!-- * User image & name -->
+                        <li v-for="contact in contacts" class="list-group-item d-flex justify-content-between align-items-center">
+                            <!-- * Contact image & name -->
                             <div class="d-flex align-items-center h-100">
                                 <figcaption class="round-pic rounded-pill me-2">
-                                    <img class="img-fluid" :src="`img/avatar${user.avatar}.jpg`" :alt="user.name">
+                                    <img class="img-fluid" :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                 </figcaption>
                                 <div>
-                                    <span>{{ user.name }}</span>
+                                    <span>{{ contact.name }}</span>
                                     <p class="m-0 text-secondary">Ultimo messaggio...</p>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@
         <section id="chat-side" class="fb-66">
             <!-- ? Chat contact -->
             <header class="p-2 d-flex justify-content-between align-items-center">
-                <!-- * User image & name -->
+                <!-- * Contact image & name -->
                 <div class="d-flex align-items-center h-100">
                     <figcaption class="round-pic rounded-pill me-2">
                         <img class="img-fluid" src="img/avatar_1.jpg" alt="">
