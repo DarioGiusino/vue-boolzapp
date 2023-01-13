@@ -148,7 +148,7 @@
 
             <!-- ? Conversation -->
             <main id="conversation" class="d-flex flex-column">
-                <div v-for="message in currentMessages" class="message" :class="message.status">
+                <div v-for="(message, i) in currentMessages" class="message" :class="message.status">
                     <!-- * Text -->
                     <p class="m-0">{{ message.text }}</p>
                     
@@ -160,7 +160,7 @@
                         <button class="btn text-secondary dropdown-toggle" data-bs-toggle="dropdown"></button>
                         <ul class="dropdown-menu">
                           <li><a class="dropdown-item" href="#">Message info</a></li>
-                          <li><a class="dropdown-item" href="#">Delete Message</a></li>
+                          <li><a class="dropdown-item" href="#" @click="deleteMessage(i)">Delete Message</a></li>
                         </ul>
                     </div>
                 </div>

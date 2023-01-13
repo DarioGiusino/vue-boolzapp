@@ -121,7 +121,7 @@ const app = Vue.createApp({
                 };
                 
                 this.currentMessages.push(sentMessage);
-                
+
                 this.receiveMessage();
             }
 
@@ -144,6 +144,10 @@ const app = Vue.createApp({
             this.contacts.forEach((contact) => {
                 contact.visible = contact.name.toLowerCase().includes(this.searchWord.toLowerCase());
             })
+        },
+
+        deleteMessage(index) {
+            this.currentMessages.splice(index, 1)
         }
     }
 })
