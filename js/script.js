@@ -6,6 +6,8 @@ const app = Vue.createApp({
 
             userMessage: '',
 
+            searchWord: 'ele',
+
             user: {
                 name: 'Dario',
                 avatar: '_io'
@@ -101,6 +103,10 @@ const app = Vue.createApp({
 
         currentMessages() {
             return this.currentContact.messages;
+        },
+
+        filteredContacts() {
+            return this.contacts.filter(contact => contact.name.includes(this.searchWord))
         }
     },
     methods: {
@@ -109,16 +115,16 @@ const app = Vue.createApp({
         },
 
         sendMessage() {
-        const sentMessage = {
-            date: '',
-            text: this.userMessage,
-            status: 'sent'
-        };
-        
-        this.currentMessages.push(sentMessage);
-        this.userMessage = '';
+            const sentMessage = {
+                date: '',
+                text: this.userMessage,
+                status: 'sent'
+            };
+            
+            this.currentMessages.push(sentMessage);
+            this.userMessage = '';
 
-        this.receiveMessage();
+            this.receiveMessage();
         },
 
         receiveMessage() {
