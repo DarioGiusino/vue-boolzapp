@@ -121,24 +121,23 @@ const app = Vue.createApp({
                 };
                 
                 this.currentMessages.push(sentMessage);
+                
+                this.receiveMessage();
             }
-            this.userMessage = '';
 
-            this.receiveMessage();
+            this.userMessage = '';
         },
 
         receiveMessage() {
-            if(this.userMessage){
-                const receivedMessage = {
-                    date: '',
-                    text: 'Ok!',
-                    status: 'received'
-                };
+            const receivedMessage = {
+                 date: '',
+                text: 'Ok!',
+                status: 'received'
+            };
                 
-                setTimeout(() => {
-                    this.currentMessages.push(receivedMessage);
-                }, 1000)
-            }
+            setTimeout(() => {
+                this.currentMessages.push(receivedMessage);
+            }, 1000)
         },
 
         filterContact() {
