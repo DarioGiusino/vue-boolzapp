@@ -98,16 +98,14 @@ const app = Vue.createApp({
     },
     computed: {
         currentContact() {
-            return this.filteredContacts[this.currentIndex];
+            const contattoFiltrato = this.contacts[this.currentIndex];
+
+            return contattoFiltrato;
         },
 
         currentMessages() {
             return this.currentContact.messages;
         },
-
-        filteredContacts() {
-            return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchWord.toLowerCase()))
-        }
     },
     methods: {
         showCurrentChat(index) {
@@ -137,6 +135,12 @@ const app = Vue.createApp({
             setTimeout(() => {
                 this.currentMessages.push(receivedMessage);
                 }, 1000)
+        },
+
+        filterContact() {
+            this.contacts.forEach((contact) => {
+                contact.visible = contact.name.toLowerCase().includes(this.searchWord.toLowerCase());
+            })
         }
     }
 })

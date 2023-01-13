@@ -84,14 +84,14 @@
                         <button class="btn" type="button" id="button-addon1">
                             <i class="bi bi-search"></i>
                         </button>
-                        <input type="text" class="form-control" placeholder="Cerca contatti..." v-model="searchWord">
+                        <input type="text" class="form-control" placeholder="Cerca contatti..." v-model="searchWord" @keyup="filterContact">
                     </div>
                 </div>
 
                 <!-- * Contacts list -->
                 <div class="contact-list">
-                    <ul class="list-group list-group-flush">
-                        <li v-for="(contact, i) in filteredContacts" class="list-group-item d-flex justify-content-between align-items-center" @click="showCurrentChat(i)">
+                    <ul v-for="(contact, i) in contacts" class="list-group list-group-flush">
+                        <li v-if="contact.visible" class="list-group-item d-flex justify-content-between align-items-center" @click="showCurrentChat(i)">
                             <!-- * Contact image & name -->
                             <div class="d-flex align-items-center h-100">
                                 <figcaption class="round-pic rounded-pill me-2">
