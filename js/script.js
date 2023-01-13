@@ -4,6 +4,8 @@ const app = Vue.createApp({
         return{
             currentIndex: 0,
 
+            userMessage: '',
+
             user: {
                 name: 'Dario',
                 avatar: '_io'
@@ -104,6 +106,31 @@ const app = Vue.createApp({
     methods: {
         showCurrentChat(index) {
             return this.currentIndex = index;
+        },
+
+        sendMessage() {
+        const sentMessage = {
+            date: '',
+            text: this.userMessage,
+            status: 'sent'
+        };
+        
+        this.currentMessages.push(sentMessage);
+        this.userMessage = '';
+
+        this.receiveMessage();
+        },
+
+        receiveMessage() {
+            const receivedMessage = {
+                date: '',
+                text: 'Ok!',
+                status: 'received'
+            };
+
+            setTimeout(() => {
+                this.currentMessages.push(receivedMessage);
+                }, 1000)
         }
     }
 })

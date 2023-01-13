@@ -161,11 +161,11 @@
                 </div>
 
                 <!-- * Input text -->
-                <input type="text" class="form-control mx-3 p-3" placeholder="Username">
+                <input type="text" class="form-control mx-3 p-3" placeholder="Scrivi un messaggio..." @keyup.enter="sendMessage" v-model="userMessage">
 
                 <!-- * Send button -->
                 <div class="btn-group">
-                    <button class="btn fs-4">
+                    <button class="btn fs-4" @click="sendMessage">
                         <i class="bi bi-send-fill fs-3"></i>
                     </button>
                 </div>
