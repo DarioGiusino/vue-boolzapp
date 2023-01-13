@@ -98,14 +98,12 @@ const app = Vue.createApp({
     },
     computed: {
         currentContact() {
-            const contattoFiltrato = this.contacts[this.currentIndex];
-
-            return contattoFiltrato;
+            return this.contacts[this.currentIndex];
         },
 
         currentMessages() {
             return this.currentContact.messages;
-        },
+        }
     },
     methods: {
         showCurrentChat(index) {
@@ -148,6 +146,10 @@ const app = Vue.createApp({
 
         deleteMessage(index) {
             this.currentMessages.splice(index, 1)
+        },
+        
+        lastMessage(index) {
+            return this.contacts[index].messages.length - 1;
         }
     }
 })

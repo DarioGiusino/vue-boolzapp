@@ -99,7 +99,7 @@
                                 </figcaption>
                                 <div>
                                     <span>{{ contact.name }}</span>
-                                    <p class="m-0 text-secondary">Ultimo messaggio...</p>
+                                    <p class="m-0 text-secondary">{{ contact.messages[lastMessage(i)].text }}</p>
                                 </div>
                             </div>
 
