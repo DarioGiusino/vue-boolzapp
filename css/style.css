@@ -125,10 +125,9 @@ i{
 
 #conversation .message{
     background-color: var(--user-msg);
-    padding: 1rem;
+    padding: 0.5rem 0.7rem;
     border-radius: 10px;
-    width: 350px;
-    position: relative;
+    max-width: 350px;
     margin-bottom: 30px;
 }
 
@@ -144,9 +143,9 @@ i{
 
 #conversation .date-message{
     color: var(--text-grey);
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
+    display: block;
+    text-align: end;
+    margin: 0.5rem 0 0.5rem 2rem;
 }
 
 /* ? Message input */
