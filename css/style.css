@@ -123,12 +123,14 @@ i{
     padding: 50px;
 }
 
+/* * Text */
 #conversation .message{
     background-color: var(--user-msg);
     padding: 0.5rem 0.7rem;
     border-radius: 10px;
     max-width: 350px;
     margin-bottom: 30px;
+    position: relative;
 }
 
 #conversation .message.sent{
@@ -141,11 +143,29 @@ i{
     align-self: flex-start;
 }
 
+/* * Date */
 #conversation .date-message{
     color: var(--text-grey);
     display: block;
     text-align: end;
     margin: 0.5rem 0 0.5rem 2rem;
+}
+
+/* * Dropdown */
+#conversation .dropdown{
+    position: absolute;
+    top: -0.2rem;
+    right: 0.5rem;
+}
+
+#conversation .dropdown button{
+    padding: 0;
+    border: none;
+    visibility: hidden;
+}
+
+#conversation .message:hover button{
+    visibility: unset;
 }
 
 /* ? Message input */
