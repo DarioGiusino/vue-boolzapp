@@ -125,7 +125,7 @@
                     </figcaption>
                     <div>
                         <span>{{ currentContact.name }}</span>
-                        <p class="m-0 text-secondary">Ultimo accesso alle</p>
+                        <p class="m-0 text-secondary">Ultimo accesso alle <span>{{ getDate() }}</span></p>
                     </div>
                 </div>
 
@@ -156,7 +156,7 @@
                     <p class="m-0">{{ message.text }}</p>
                     
                     <!-- * Date -->
-                    <sub class="date-message">10/01/2020 15:50</sub>
+                    <sub class="date-message">{{ message.date }}</sub>
                     
                     <!-- * Dropdown -->
                     <div class="dropdown">

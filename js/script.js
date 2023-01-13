@@ -1,3 +1,5 @@
+const dt = luxon.DateTime;
+
 const app = Vue.createApp({
     name: 'Boolzapp',
     data(){
@@ -113,14 +115,14 @@ const app = Vue.createApp({
         sendMessage() {
             if(this.userMessage){
                 const sentMessage = {
-                    date: '',
+                    date: this.getDate(),
                     text: this.userMessage,
                     status: 'sent'
                 };
                 
                 this.currentMessages.push(sentMessage);
 
-                this.receiveMessage();
+                setTimeout(this.receiveMessage, 1000)
             }
 
             this.userMessage = '';
@@ -128,14 +130,12 @@ const app = Vue.createApp({
 
         receiveMessage() {
             const receivedMessage = {
-                 date: '',
+                 date: this.getDate(),
                 text: 'Ok!',
                 status: 'received'
             };
-                
-            setTimeout(() => {
-                this.currentMessages.push(receivedMessage);
-            }, 1000)
+
+            this.currentMessages.push(receivedMessage);
         },
 
         filterContact() {
@@ -147,9 +147,13 @@ const app = Vue.createApp({
         deleteMessage(index) {
             this.currentMessages.splice(index, 1)
         },
-        
+
         lastMessage(index) {
             return this.contacts[index].messages.length - 1;
+        },
+
+        getDate() {
+            return dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
         }
     }
 })
