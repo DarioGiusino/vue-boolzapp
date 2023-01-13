@@ -95,6 +95,10 @@ const app = Vue.createApp({
     computed: {
         currentContact() {
             return this.contacts[this.currentIndex];
+        },
+
+        currentMessages() {
+            return this.currentContact.messages;
         }
     },
     methods: {

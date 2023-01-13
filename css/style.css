@@ -127,17 +127,19 @@ i{
     background-color: var(--user-msg);
     padding: 1rem;
     border-radius: 10px;
-    width: 600px;
+    width: 350px;
     position: relative;
     margin-bottom: 30px;
 }
 
-#conversation .message.user{
+#conversation .message.sent{
     background-color: var(--user-msg);
+    align-self: flex-end;
 }
 
-#conversation .message.contact{
+#conversation .message.received{
     background-color: #fff;
+    align-self: flex-start;
 }
 
 #conversation .date-message{
