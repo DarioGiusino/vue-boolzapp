@@ -176,7 +176,7 @@
                 </div>
 
                 <!-- * Input text -->
-                <input type="text" class="form-control mx-3 p-3" placeholder="Scrivi un messaggio..." @keyup.enter="sendMessage" v-model="userMessage">
+                <input type="text" class="form-control mx-3 p-3" placeholder="Scrivi un messaggio..." @keyup.enter="sendMessage" v-model.trim="userMessage">
 
                 <!-- * Send button -->
                 <div class="btn-group">
