@@ -6,7 +6,7 @@ const app = Vue.createApp({
 
             userMessage: '',
 
-            searchWord: 'ele',
+            searchWord: '',
 
             user: {
                 name: 'Dario',
@@ -106,7 +106,7 @@ const app = Vue.createApp({
         },
 
         filteredContacts() {
-            return this.contacts.filter(contact => contact.name.includes(this.searchWord))
+            return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchWord.toLowerCase()))
         }
     },
     methods: {

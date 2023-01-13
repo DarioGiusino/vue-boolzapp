@@ -88,7 +88,7 @@
                 <!-- * Contacts list -->
                 <div class="contact-list">
                     <ul class="list-group list-group-flush">
-                        <li v-for="(contact, i) in contacts" class="list-group-item d-flex justify-content-between align-items-center" @click="showCurrentChat(i)">
+                        <li v-for="(contact, i) in filteredContacts" class="list-group-item d-flex justify-content-between align-items-center" @click="showCurrentChat(i)">
                             <!-- * Contact image & name -->
                             <div class="d-flex align-items-center h-100">
                                 <figcaption class="round-pic rounded-pill me-2">
