@@ -108,10 +108,18 @@ i{
 
 .contact-list li{
     cursor: pointer;
+    position: relative;
 }
 
 .contact-list li:hover{
     background-color: var(--bcc-grey);
+}
+
+/* * Date */
+.contact-list .date-message{
+    position: absolute;
+    bottom: 0;
+    right: 0.3rem;
 }
 
 /* # Chat side */
@@ -144,7 +152,7 @@ i{
 }
 
 /* * Date */
-#conversation .date-message{
+.date-message{
     color: var(--text-grey);
     display: block;
     text-align: end;
