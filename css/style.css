@@ -166,6 +166,12 @@ i{
     align-self: flex-start;
 }
 
+#conversation .message.initial{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-self: center;
+}
+
 /* * Date */
 .date-message{
     color: var(--text-grey);

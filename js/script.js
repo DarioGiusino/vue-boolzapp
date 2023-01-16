@@ -12,6 +12,8 @@ const app = Vue.createApp({
 
             viewModal: false,
 
+            newContactName: '',
+
             user: {
                 name: 'Dario',
                 avatar: '_io'
@@ -162,6 +164,23 @@ const app = Vue.createApp({
         showHideModal() {
           this.viewModal = !this.viewModal;
         },
+
+        addContact() {
+          const newContact = {
+            name: this.newContactName,
+            avatar: '_1',
+            visible: true,
+            messages: [{
+              date: '',
+              text: 'Questa è una chat con criptografia end-to-end',
+              status: 'initial'
+            }],
+          };
+
+          this.contacts.push(newContact)
+
+          this.showHideModal()
+        }
     },
 })
 
