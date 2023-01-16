@@ -4,6 +4,8 @@
     --bcc-grey: #eaeaea;
     --bcc-notification: #8edafc;
     --bcc-contacts: #fff;
+    --bcc-welcome: #0d1117;
+    --welcome-text: #c9d1d9;
     --user-msg: #d5f9ba;
     --icon-light-grey: #b1b1b1;
     --icon-dark-grey: #6b7376;
@@ -125,9 +127,10 @@ i{
 /* # Chat side */
 /* ! Welcome page */
 #welcome-page{
-    background-color: var(--icon-dark-grey);
+    background-color: var(--bcc-welcome);
+    color: var(--welcome-text);
+    text-align: center;
 }
-
 
 /* ! Chat section */
 /* ? Conversation */

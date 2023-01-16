@@ -116,9 +116,11 @@
 
         <!-- # Chat side -->
         <!-- ! Welcome Page -->
-        <section v-if="!currentIndex && currentIndex !== 0" id="welcome-page" class="fb-66">
-            <h1>Benvenuto su Boolzap, la app di messaggistica (quasi) innovativa!</h1>
-            <p>Clicca su <span>aggiungi</span> per importare un contatto o clicca su di una chat per parlare con un tuo amico!</p>
+        <section v-if="!currentIndex && currentIndex !== 0" id="welcome-page" class="fb-66 p-5">
+            <h1 class="welcome-title mb-5">Benvenuto su Boolzap, la app di messaggistica (quasi) innovativa!</h1>
+            <p class="welcome-text">Clicca su <span role="button" class="text-decoration-underline">aggiungi</span> per importare un contatto o clicca su di una chat per parlare con un tuo amico!</p>
+
+            <img class="img-fluid" src="img/welcome_page_img.png" alt="welcome page image">
         </section>
         
         <!-- ! Chat section -->
