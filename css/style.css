@@ -196,3 +196,38 @@ i{
 #message-input i{
     color: var(--icon-dark-grey);
 }
+
+/* # Add contact modal */
+#add-modal{
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-modal .contact-modal{
+    width: 25vw;
+    height: 40vh;
+    padding: 1.75rem;
+
+    background-color: var(--welcome-text);
+    color: var(--bcc-welcome);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: auto;
+}
