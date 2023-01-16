@@ -124,6 +124,15 @@ i{
     right: 0.3rem;
 }
 
+/* * Add contact button */
+.contact-list button{
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
 /* # Chat side */
 /* ! Welcome page */
 #welcome-page{

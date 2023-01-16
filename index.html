@@ -110,6 +110,11 @@
                             <sub class="date-message">{{ contact.messages[lastMessage(i)].date }}</sub>
                         </li>
                     </ul>
+
+                    <!-- * Add contact button -->
+                    <button class="btn fs-4" @click="showHideModal">
+                        <i class="bi bi-plus fst-normal">Aggiungi contatto</i>
+                    </button>
                 </div>
             </nav>
         </section>

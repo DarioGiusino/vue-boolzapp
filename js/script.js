@@ -180,6 +180,8 @@ const app = Vue.createApp({
 
           this.contacts.push(newContact)
 
+          this.newContactName = '';
+
           this.showHideModal()
         }
     },
