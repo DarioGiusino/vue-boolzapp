@@ -215,6 +215,7 @@ i{
     align-items: center;
 }
 
+/* ? Contact modal */
 #add-modal .contact-modal{
     width: 25vw;
     height: 40vh;
@@ -230,4 +231,15 @@ i{
     justify-content: space-between;
 
     overflow: auto;
+}
+
+/* ? Close button */
+#add-modal i.bi-x-lg{
+    font-size: 50px;
+
+    position: absolute;
+    top: 0.5rem;
+    right: 2rem;
+
+    cursor: pointer;
 }

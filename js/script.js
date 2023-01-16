@@ -10,6 +10,8 @@ const app = Vue.createApp({
 
             searchWord: '',
 
+            viewModal: false,
+
             user: {
                 name: 'Dario',
                 avatar: '_io'
@@ -109,7 +111,7 @@ const app = Vue.createApp({
     },
     methods: {
         showCurrentChat(index) {
-          this.currentIndex = 0;
+          // this.currentIndex = 0;
           return this.currentIndex = index;
         },
 
@@ -155,7 +157,11 @@ const app = Vue.createApp({
 
         getDate() {
             return dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
-        }
+        },
+
+        showHideModal() {
+          this.viewModal = !this.viewModal;
+        },
     },
 })
 
