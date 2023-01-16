@@ -4,7 +4,7 @@ const app = Vue.createApp({
     name: 'Boolzapp',
     data(){
         return{
-            currentIndex: 0,
+            currentIndex: null,
 
             userMessage: '',
 
@@ -109,7 +109,8 @@ const app = Vue.createApp({
     },
     methods: {
         showCurrentChat(index) {
-            return this.currentIndex = index;
+          this.currentIndex = 0;
+          return this.currentIndex = index;
         },
 
         sendMessage() {
@@ -155,7 +156,7 @@ const app = Vue.createApp({
         getDate() {
             return dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
         }
-    }
+    },
 })
 
 app.mount('#app');

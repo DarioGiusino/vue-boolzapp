@@ -123,6 +123,13 @@ i{
 }
 
 /* # Chat side */
+/* ! Welcome page */
+#welcome-page{
+    background-color: var(--icon-dark-grey);
+}
+
+
+/* ! Chat section */
 /* ? Conversation */
 #conversation{
     height: calc(100% - 160px);

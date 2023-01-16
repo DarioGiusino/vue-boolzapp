@@ -115,7 +115,14 @@
         </section>
 
         <!-- # Chat side -->
-        <section id="chat-side" class="fb-66">
+        <!-- ! Welcome Page -->
+        <section v-if="!currentIndex && currentIndex !== 0" id="welcome-page" class="fb-66">
+            <h1>Benvenuto su Boolzap, la app di messaggistica (quasi) innovativa!</h1>
+            <p>Clicca su <span>aggiungi</span> per importare un contatto o clicca su di una chat per parlare con un tuo amico!</p>
+        </section>
+        
+        <!-- ! Chat section -->
+        <section v-else class="fb-66">
             <!-- ? Chat contact -->
             <header class="p-2 d-flex justify-content-between align-items-center">
                 <!-- * Contact image & name -->
