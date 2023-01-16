@@ -238,7 +238,7 @@ i{
 /* ? Contact modal */
 #add-modal .contact-modal{
     width: 25vw;
-    height: 40vh;
+    height: 50vh;
     padding: 1.75rem;
 
     background-color: var(--welcome-text);
