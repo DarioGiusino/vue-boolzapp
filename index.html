@@ -209,7 +209,7 @@
         <!-- # Add contact modal -->
         <section id="add-modal" :class="{'d-none': !viewModal}">
             <!-- ? Contact modal -->
-            <div class="contact-modal">
+            <div class="contact-modal" @keyup.enter="addContact">
                 <!-- * Modal title -->
                 <h3 class="mb-5">Aggiungi contatto</h3>
 
@@ -222,7 +222,7 @@
                 <!-- * Modal img field -->
                 <div class="input-group mb-5">
                     <span class="input-group-text">URL</span>
-                    <input type="text" class="form-control" placeholder="Inserisci URL immagine profilo...">
+                    <input type="text" class="form-control" placeholder="Inserisci URL immagine profilo... (not working)">
                 </div>
 
                 <!-- * Modal button -->

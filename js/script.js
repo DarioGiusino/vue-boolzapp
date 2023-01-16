@@ -169,7 +169,7 @@ const app = Vue.createApp({
           if(!this.newContactName) return;
           const newContact = {
             name: this.newContactName,
-            avatar: '_1',
+            avatar: '_5',
             visible: true,
             messages: [{
               date: '',
