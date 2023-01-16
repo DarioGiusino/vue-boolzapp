@@ -166,6 +166,7 @@ const app = Vue.createApp({
         },
 
         addContact() {
+          if(!this.newContactName) return;
           const newContact = {
             name: this.newContactName,
             avatar: '_1',
